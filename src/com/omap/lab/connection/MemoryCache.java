@@ -1,4 +1,4 @@
-package com.omap.lab.connetion.img;
+package com.omap.lab.connection;
 
 import java.lang.ref.SoftReference;
 import java.util.Collections;
