@@ -45,6 +45,15 @@ public class DrawingRoute {
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * Dinamically Make URL From Latitude & Longitude with source and destination
+	 * 
+	 * @param sourcelat
+	 * @param sourcelog
+	 * @param destlat
+	 * @param destlog
+	 * @return {@link String}
+	 */
 	public String makeURL(double sourcelat, double sourcelog, double destlat, double destlog) {
 		StringBuilder urlString = new StringBuilder();
 		urlString.append("http://maps.googleapis.com/maps/api/directions/json");
@@ -60,6 +69,12 @@ public class DrawingRoute {
 		return urlString.toString();
 	}
 
+	/**
+	 * Parsing Data from url 
+	 * 
+	 * @param url
+	 * @return 
+	 */
 	public String getJSONFromUrl(String url) {
 		try {
 			DefaultHttpClient httpClient = new DefaultHttpClient();
@@ -92,12 +107,19 @@ public class DrawingRoute {
 			return "ERROR_CONN";
 		}
 	}
+	
+	/**
+	 * Drawing route in Google Maps 
+	 * 
+	 * @param map
+	 * @param jsondata
+	 */
 
-	public void drawPath(GoogleMap map, String result) {
+	public void drawPath(GoogleMap map, String jsondata) {
 
 		try {
 			// Tranform the string into a json object
-			final JSONObject json = new JSONObject(result);
+			final JSONObject json = new JSONObject(jsondata);
 			JSONArray routeArray = json.getJSONArray("routes");
 			JSONObject routes = routeArray.getJSONObject(0);
 			JSONObject overviewPolylines = routes.getJSONObject("overview_polyline");

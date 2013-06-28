@@ -17,7 +17,7 @@ import android.os.StrictMode;
 import android.util.Log;
 
 /**
- * HTTPCon easy connection with HTTPPOST and HTTPGET
+ * (OMAPS-LAB) HTTPCon easy connection with HTTPPOST and HTTPGET
  * 
  * @author omap (agusprasetyo811@gmail.com)
  * @version 0.4.1
