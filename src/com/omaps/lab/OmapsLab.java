@@ -28,6 +28,10 @@ public class OmapsLab extends Activity {
 		// loader - loader image, will be displayed before getting image
 		// image - ImageView
 		// imgLoader.DisplayImage(image_url, loader, image);
+		
+		// GCM NOTIFICATION SERVICE ======================================================
+		// Please enable in AndroidManfest <service android:name="com.your.packet.GCMIntentService" />
+		// GCMIntentService example in com.omap.lab.notification packet
 
 	}
 
