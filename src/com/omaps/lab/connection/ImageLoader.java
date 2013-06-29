@@ -1,4 +1,4 @@
-package com.omap.lab.connection;
+package com.omaps.lab.connection;
 
 import java.io.File;
 import java.io.FileInputStream;

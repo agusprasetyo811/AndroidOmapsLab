@@ -5,20 +5,20 @@
     android:versionName="1.0" >
 
     <permission
-        android:name="com.omap.lab.permission.MAPS_RECEIVE"
+        android:name="com.omaps.lab.permission.MAPS_RECEIVE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.omap.lab.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.omaps.lab.permission.MAPS_RECEIVE" />
 
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
 
     <permission
-        android:name="com.omap.lab.permission.C2D_MESSAGE"
+        android:name="com.omaps.lab.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.omap.lab.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.omaps.lab.permission.C2D_MESSAGE" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -56,7 +56,7 @@
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-                <category android:name="com.omap.lab" />
+                <category android:name="com.omaps.lab" />
             </intent-filter>
         </receiver>
     </application>

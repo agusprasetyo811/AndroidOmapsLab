@@ -1,4 +1,4 @@
-package com.omap.lab.maps;
+package com.omaps.lab.maps;
 
 import java.io.BufferedReader;
 import java.io.IOException;

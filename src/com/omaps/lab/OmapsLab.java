@@ -30,7 +30,7 @@ public class OmapsLab extends Activity {
 		// imgLoader.DisplayImage(image_url, loader, image);
 		
 		// GCM NOTIFICATION SERVICE ======================================================
-		// Please enable in AndroidManfest <service android:name="com.your.packet.GCMIntentService" />
+		// Please enable in AndroidManfest in the <application><service android:name="com.your.packet.GCMIntentService" /></application> 
 		// GCMIntentService example in com.omap.lab.notification packet
 
 	}
