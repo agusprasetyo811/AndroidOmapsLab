@@ -5,11 +5,18 @@ import android.content.Intent;
 import android.util.Log;
 
 import com.google.android.gcm.GCMBaseIntentService;
+import com.omaps.lab.config.OmapsConfig;
 
+/**
+ * GCMIntentService Example
+ * 
+ * @author omap
+ * 
+ */
 public class GCMIntentService extends GCMBaseIntentService {
 
 	public GCMIntentService() {
-		super("972564378948");
+		super(OmapsConfig.NOTIFICATION_DEVICE_ID);
 	}
 
 	@Override

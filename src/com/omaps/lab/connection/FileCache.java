@@ -3,6 +3,10 @@ package com.omaps.lab.connection;
 import java.io.File;
 import android.content.Context;
  
+/**
+ * @author omap
+ *
+ */
 public class FileCache {
  
     private File cacheDir;
