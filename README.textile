@@ -1,0 +1,175 @@
+h1. AndroidOmapsLab
+
+_(OMAPS-LAB) Android Project Library._ 
+
+
+h1. INTERNET CONNECTION
+
+h3. packet @com.omaps.lab.connection@
+
+h3. HTTPCon
+
+Connecting to Server with GET & POST Method
+
+* @HTTPCon.GET(url)@
+bc.. 
+	HTTPCon.GET("www.google.com");
+p. 
+* @HTTPCon.POST(url, nameValuePairs)@
+bc.. 
+	ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+	nameValuePairs.add(new BasicNameValuePair("image", ba1));
+	HTTPCon.POST("www.google.com", nameValuePairs);
+p. 
+* @HTTPCon.UPLOADIMG(url, bitmap)@
+bc.. 
+	Bitmap imgBitmap;
+	HTTPCon.UPLOADIMG("www.google.com/post/", imgBitmap); 
+p. 
+
+h3.  If Android 4.0 or Higer
+
+@setOnHighestSDK()@
+
+h3. ImageLoader
+
+Get Images and show in android device From server with URL
+
+bc.. 
+<ImageView
+	android:id="@+id/img"
+	android:layout_width="194dp"
+	android:layout_height="188dp"
+	android:layout_x="27dp"
+	android:layout_y="125dp"
+	android:src="@drawable/abs__list_longpressed_holo" />
+p. 
+
+On Java
+
+bc.. 
+final ImageView imageView = (ImageView) findViewById(R.id.img); 
+ImageLoader imgLoader = new ImageLoader(getApplicationContext());
+
+imgLoad.DisplayImage("http://kpopstarshop.com/template/omap-ci/images/catalog/350/BSC0ODjCQAAwAIS.jpglarge-400x400.jpg", 0, imageView);
+
+p. 
+
+<hr>
+
+h1. SPLITER DATA MANAGER
+
+h3. packet @com.omaps.lab.datamanager@
+
+h3. Spliter
+
+Split data or array data
+
+_ex :_ 
+
+<hr>
+
+h1. MAPS
+
+h3. packet @com.omaps.lab.maps@
+
+h3. DrawingRoute
+
+_*example of drawing route :*_
+
+bc.. 
+GoogleMaps maps;
+double myLatitude, myLongitude, getLatitudeDest, getLongitudeDest;
+
+DrawingRoute draw = new DrawingRoute();
+String mapUrl = draw.makeURL(myLatitude, myLongitude, getLatitudeDest, getLongitudeDest);
+String result = HTTPCon.GET(mapsUrl);
+draw.drawPath(maps, result);
+String getMapData = draw.getMapData(maps, result);
+p. 
+
+<hr>
+
+h1. SYMBOL
+
+h3. packet @com.omaps.lab.symbol@
+
+h3. SymbolPrice
+
+_*Example of SymbolPrice*_
+
+@SymbolPrice.rp(10000);@ -> return Rp. 10.000
+
+<hr>
+
+h1. WEBVIEWS
+
+h3. packet @com.omaps.lab.webviews@
+
+h3. CallBackView
+
+*Example of CallBackView*
+
+web_view.xml 
+
+bc..  
+<?xml version="1.0" encoding="utf-8"?>
+<WebView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/web_about"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" />
+p. 
+
+On Java
+
+bc.. 
+callBackView = new CallBackView();
+
+webView = (WebView) findViewById(R.id.web_view);
+webView.getSettings().setJavaScriptEnabled(true);
+webView.getSettings().setEnableSmoothTransition(true);
+webView.getSettings().setLoadsImagesAutomatically(true);
+webView.setWebViewClient(callBackView);
+webView.loadUrl("www.omapslab.com/comment/on_phone");
+p. 
+
+<hr>
+
+h1. GCM NOTIFICATION
+
+
+h3. Example of GCM Notification Registration
+ 
+bc.. 
+public void registerGCM() {
+	GCMRegistrar.checkDevice(this);
+	GCMRegistrar.checkManifest(this);
+	final String regId = GCMRegistrar.getRegistrationId(this);
+	system.out.println("REGISTER ID==" + regId);
+	
+	if (regId.equals("")) {
+		GCMRegistrar.register(getApplicationContext(), Config.API_DEVICE_ID);
+		System.out.println("REGISTER IN PROGRESS");	
+	} else {
+		System.out.println("REGISTERD");
+	}
+}
+	
+public void unRegisterGCM() {
+	GCMRegistrar.unregister(this);
+}
+p. 
+
+
+<hr>
+
+Agus Prasetyo CEO and Founder at OMAPSLAB
+agusprasetyo811@gmail.com
+www.omapslab.com
+
+
+
+
+
+
+
