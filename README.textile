@@ -12,20 +12,26 @@ h3. HTTPCon
 Connecting to Server with GET & POST Method
 
 * @HTTPCon.GET(url)@
+
 bc.. 
 	HTTPCon.GET("www.google.com");
 p. 
+
 * @HTTPCon.POST(url, nameValuePairs)@
+
 bc.. 
 	ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
 	nameValuePairs.add(new BasicNameValuePair("image", ba1));
 	HTTPCon.POST("www.google.com", nameValuePairs);
 p. 
+ 
 * @HTTPCon.UPLOADIMG(url, bitmap)@
+
 bc.. 
 	Bitmap imgBitmap;
 	HTTPCon.UPLOADIMG("www.google.com/post/", imgBitmap); 
 p. 
+
 
 h3.  If Android 4.0 or Higer
 
